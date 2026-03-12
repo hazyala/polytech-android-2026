@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Test,\nHello, Android!"
+        android:textAlignment="center"
+        android:textColor="#CDDC39"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작하기"
+        android:layout_margin="30px"
+        android:backgroundTint="#CDDC39"
+        android:textColor="#353232"
+        android:textSize="20sp"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="팝업 허용하기"
+        android:textSize="15sp"
+        android:textColor="@color/cardview_light_background"
+        android:buttonTint="@color/cardview_light_background"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        >
+
+        <RadioButton
+            android:id="@+id/rba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림 수신"
+            android:textColor="@color/cardview_light_background"
+            app:buttonTint="@color/cardview_light_background"
+            />
+
+        <RadioButton
+            android:id="@+id/rbc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림 거부"
+            android:textColor="@color/cardview_light_background"
+            app:buttonTint="@color/cardview_light_background"
+            />
+
+    </RadioGroup>
+</LinearLayout>
