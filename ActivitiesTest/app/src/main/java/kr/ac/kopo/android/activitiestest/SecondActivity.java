@@ -1,39 +1,36 @@
 package kr.ac.kopo.android.activitiestest;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.graphics.shapes.Feature;
 
-public class MainActivity extends AppCompatActivity {
-    EditText editName;
+public class SecondActivity extends AppCompatActivity {
+    TextView textResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        editName = findViewById(R.id.edit_name);
-        Button btnMain = findViewById(R.id.btn_main);
-        btnMain.setOnClickListener(new View.OnClickListener() {
+        textResult = findViewById(R.id.text_result);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        textResult.setText(name + "님 환영합니다.");
+
+        Button btnSecond = findViewById(R.id.btn_second);
+        btnSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = editName.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                intent.putExtra("name", name);
-                startActivity(intent);
+                finish();
             }
         });
     }

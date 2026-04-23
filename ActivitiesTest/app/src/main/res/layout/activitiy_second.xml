@@ -5,21 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffff00"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    tools:context=".SecondActivity">
     <Button
-        android:id="@+id/btn_main"
+        android:id="@+id/btn_second"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="두번째 액티비티 시작"/>
-
-    <EditText
-        android:id="@+id/edit_name"
+        android:layout_margin="30dp"
+        android:text="돌아가기"/>
+    <TextView
+        android:id="@+id/text_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="이름을 입력하세요."/>
-
+        android:gravity="center"
+        android:textSize="20sp"/>
 </LinearLayout>
