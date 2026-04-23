@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:gravity="center_horizontal"
+    android:background="#00C2D4">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#E91E63"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="PET SELECTOR"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:elevation="5dp" />
+
+    <CheckBox
+        android:id="@+id/chk_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="시작하기"
+        android:textColor="#333333"
+        android:buttonTint="#E91E63"
+        android:textSize="16sp" />
+
+    <!-- CardView 대신 LinearLayout 사용 -->
+    <LinearLayout
+        android:id="@+id/card_radio"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/card_background"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/text_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="어떤 동물을 좋아하시나요?"
+            android:textColor="#E91E63"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고양이"
+                android:layout_marginRight="10dp" />
+
+            <RadioButton
+                android:id="@+id/rb_dog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강아지"
+                android:layout_marginRight="10dp" />
+
+            <RadioButton
+                android:id="@+id/rb_hamster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="햄스터" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#E91E63"
+            android:text="선택 완료"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- CardView 대신 FrameLayout 사용 (이미지용) -->
+    <FrameLayout
+        android:id="@+id/card_view"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_background"
+        android:elevation="12dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/img_pet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="#F0F0F0" />
+    </FrameLayout>
+
+</LinearLayout>
